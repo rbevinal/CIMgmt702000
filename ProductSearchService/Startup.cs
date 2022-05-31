@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,24 @@ namespace ProductSearchService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSwaggerGen(gen =>
+            {
+                gen.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "ProductSearch Service"
+                    ,
+                    Version = "v1"
+                    ,
+                    Contact = new OpenApiContact
+                    {
+                        Email = "raghavendra.kulkarni2@cognizant.com"
+                                                  ,
+                        Name = "Raghavendra Kulkarni(702000)"
+                    }
+                    ,
+                    Description = "Provides a service to list out all the products."
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,7 +54,8 @@ namespace ProductSearchService
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseSwagger();
+            app.UseSwaggerUI(ui => ui.SwaggerEndpoint("/swagger/v1/swagger.json", "ProductSearch Service v1"));
             app.UseHttpsRedirection();
 
             app.UseRouting();
