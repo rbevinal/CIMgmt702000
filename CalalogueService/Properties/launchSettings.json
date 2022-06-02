@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "api/v1/Catalogue",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "CIMgmt702000": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "api/v1/Catalogue",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
@@ -29,14 +29,14 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/weatherforecast",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/v1/Catalogue",
       "publishAllPorts": true,
       "useSSL": true
     },
     "WSL": {
       "commandName": "WSL2",
       "launchBrowser": true,
-      "launchUrl": "https://localhost:5001/weatherforecast",
+      "launchUrl": "https://localhost:5001/api/v1/Catalogue",
       "environmentVariables": {
         "ASPNETCORE_URLS": "https://localhost:5001;http://localhost:5000",
         "ASPNETCORE_ENVIRONMENT": "Development"

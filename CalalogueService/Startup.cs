@@ -12,7 +12,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.OpenApi.Models;
 
-namespace CIMgmt702000
+namespace CIMgmt702000.CatalogueService
 {
     public class Startup
     {
@@ -26,6 +26,7 @@ namespace CIMgmt702000
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<CatalogueDbContext>(ServiceLifetime.Scoped);
             services.AddControllers();
             services.AddSwaggerGen(gen =>
             {
