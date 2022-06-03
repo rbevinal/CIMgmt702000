@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CIMgmt702000.CatalogueService.Domain.EntityConfig
+namespace CIMgmt702000.ProductSearchService.Domain.EntityConfig
 {
     public class ProductBrandModelTypeConfig : IEntityTypeConfiguration<ProductBrandModel>
     {
@@ -26,9 +26,8 @@ namespace CIMgmt702000.CatalogueService.Domain.EntityConfig
             builder
                 .Property(col => col.ModelInStock)
                 .HasMaxLength(50);
-
-            builder.
-                Property(col => col.Location)
+            builder
+                .Property(col => col.Location)
                 .HasMaxLength(50);
 
             builder

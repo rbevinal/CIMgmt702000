@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CIMgmt702000.CatalogueService.Domain
+namespace CIMgmt702000.InventoryService.Domain
 {
     public class ProductBrandModel : EntityBase
     {

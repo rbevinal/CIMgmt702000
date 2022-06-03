@@ -23,7 +23,7 @@ namespace CIMgmt702000.CatalogueService.Domain.EntityConfig
 
             builder
                 .Property(col => col.CreatedOn)
-                .HasDefaultValueSql("getedate()");
+                .HasDefaultValueSql("getdate()");
 
             builder
                 .Property(col => col.ModifiedBy)
@@ -31,7 +31,7 @@ namespace CIMgmt702000.CatalogueService.Domain.EntityConfig
 
             builder
                 .Property(col => col.ModifiedOn)
-                .HasDefaultValueSql("getedate()");
+                .HasDefaultValueSql("getdate()");
         }       
     }
 }

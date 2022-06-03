@@ -5,12 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace InventoryService.Controllers
+namespace CIMgmt702000.ProductSearchService.Controllers.v1
 {
+    [ApiVersion("1.0")]
     [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-    public class InventoryController : ControllerBase
+    public class ProductSearchesController : ControllerBase
     {
-
     }
 }

@@ -5,20 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CIMgmt702000.CatalogueService.Domain.EntityConfig
+namespace CIMgmt702000.ProductSearchService.Domain.EntityConfig
 {
-    public class ProductTypeConfig : IEntityTypeConfiguration<Product>
+    public class ProductBrandTypeConfig : IEntityTypeConfiguration<ProductBrand>
     {
-        public void Configure(EntityTypeBuilder<Product> builder)
+        public void Configure(EntityTypeBuilder<ProductBrand> builder)
         {
             builder.HasKey(col => col.Id);
-            builder.HasMany(col => col.ProductBrands);
+            builder.HasOne(col => col.Product);
             builder
-                .Property(col => col.ProductName)
+                .Property(col => col.ProductBrandName)
                 .HasMaxLength(80);
-            builder
-                .Property(col => col.ProductNumber)
-                .IsRequired();
+           
             builder
                 .Property(col => col.CreatedBy)
                 .HasMaxLength(100);
@@ -34,6 +32,6 @@ namespace CIMgmt702000.CatalogueService.Domain.EntityConfig
             builder
                 .Property(col => col.ModifiedOn)
                 .HasDefaultValueSql("getdate()");
-        }        
+        }       
     }
 }

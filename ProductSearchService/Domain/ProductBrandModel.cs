@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CIMgmt702000.CatalogueService.Domain
+namespace CIMgmt702000.ProductSearchService.Domain
 {
     public class ProductBrandModel : EntityBase
     {
@@ -15,7 +15,6 @@ namespace CIMgmt702000.CatalogueService.Domain
         public string ModelMake { get; set; }
         public int ModelInStock { get; set; }
         public string Location { get; set; }
-
         public ProductBrand ProductBrand { get; set; }
     }
 }

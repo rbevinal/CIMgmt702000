@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CIMgmt702000.CatalogueService.Domain.EntityConfig
+namespace CIMgmt702000.InventoryService.Domain.EntityConfig
 {
     public class ProductTypeConfig : IEntityTypeConfiguration<Product>
     {

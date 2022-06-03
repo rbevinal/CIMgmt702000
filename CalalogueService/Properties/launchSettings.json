@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/v1/Catalogue",
+      "launchUrl": "api/Catalogue",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "CIMgmt702000": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/v1/Catalogue",
+      "launchUrl": "api/Catalogue",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
@@ -29,7 +29,7 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/v1/Catalogue",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/Catalogue",
       "publishAllPorts": true,
       "useSSL": true
     },
